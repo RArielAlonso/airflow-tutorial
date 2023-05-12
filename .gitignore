@@ -2,3 +2,4 @@ logs/
 log*
 logs/dag_processor_manager/
 logs/scheduler/
+.vscode
