@@ -11,7 +11,7 @@ default_args = {
 
 @dag(dag_id='dag_with_taskflow_api_v03',
      default_args=default_args,
-     start_date=datetime(2023, 10, 7),
+     start_date=datetime(2023, 10, 4),
      schedule_interval='@daily')
 def hello_world_elt():
     @task(multiple_outputs=True)
@@ -28,7 +28,6 @@ def hello_world_elt():
     @task()
     def greet(first_name, last_name, age):
         print(f"Hello World ! My name is {first_name} {last_name} and i am {age} years old")
-
     name_dict = get_name()
     age = get_age()
     greet(first_name=name_dict['first_name'],
